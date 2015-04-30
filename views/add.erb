@@ -1,0 +1,19 @@
+<script>
+	function crypteur(){
+		var cons = "c#"+document.getElementById("cons").value
+		var mod = "m#"+document.getElementById("mod").value
+		var datacrypt = cons+mod
+		document.getElementById("recept").value = datacrypt+":"
+	}
+</script>
+<form>
+	<p>Marque :</p>
+		<input id="cons" placeholder="Constructeur">
+	<p>Modèles (séparés par ";")</p>
+		<input id="mod" placeholder="Modèle">
+</form>
+<button onclick="crypteur()">Valider</button>
+<form method="POST" action="/add">
+<input name="crypt" id="recept">
+<button type="submit">Ajouter</button>
+</form>

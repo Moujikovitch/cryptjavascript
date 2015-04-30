@@ -1,0 +1,2 @@
+require './protocrypt'
+require 'sinatra/activerecord/rake'

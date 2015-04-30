@@ -1,0 +1,25 @@
+<div id="kikoo">
+</div>
+<script>
+	var crypt =""
+</script>
+<% @datas.each do |t| %>
+	<script>crypt += "<%= t.crypt  %>"</script>
+<% end %>
+<script>
+	var crysplit = crypt.split(":");
+	var constr =""
+	for (i = 0; i < crysplit.length; i++) {
+		morceau = "<option>"+cryptsplit[i].substring(2,crysplit[i].indexOf("m#"))+"</option>";
+		constr += morceau
+	};
+	var modetotal = crypt.substring(constr.length+4,crypt.length);
+	var mode = modetotal.split(";");
+	var assemb = "";
+	for (i = 0; i < mode.length; i++) {
+		fragment = "<option>"+mode[i]+"</option>";
+		assemb += fragment;
+	};
+	var impression = "Marque : "+constr+"<br>Modèle : "+"<select>"+assemb+"</select>";
+	document.getElementById("kikoo").innerHTML = impression;
+</script>
